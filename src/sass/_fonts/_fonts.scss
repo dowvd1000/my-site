@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Work Sans";
+	src: url("//assets.dow.x10.mx/dist/fonts/WorkSans[wght].woff2") format("woff2"),
+		 url("//assets.dow.x10.mx/dist/fonts/WorkSans[wght].ttf") format("truetype");
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Work Sans";
+	src: url("//assets.dow.x10.mx/dist/fonts/WorkSans-Italic[wght].woff2") format("woff2"),
+		 url("//assets.dow.x10.mx/dist/fonts/WorkSans-Italic[wght].ttf") format("truetype");
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Fira Code";
+	src: url("//assets.dow.x10.mx/dist/fonts/FiraCode-VF.woff2") format("woff2"),
+		 url("//assets.dow.x10.mx/dist/fonts/FiraCode-VF.woff") format("woff"),
+		 url("//assets.dow.x10.mx/dist/fonts/FiraCode-VF.ttf") format("truetype");
+	font-style: normal;
+	font-display: swap;
+}

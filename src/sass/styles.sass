@@ -1,0 +1,169 @@
+$g1: rgba(0, 120, 215, 0.9)
+$g2: rgba(0, 90, 200, 0.8)
+$bg: rgb(225, 225, 225)
+$br: 10px
+
+:root
+	--bg-colour: $bg
+	--scroll-bar-colour: rgb(200, 200, 200)
+
+@media (prefers-color-scheme: dark)
+	:root[color-mode="user"]
+		--bg-colour: rgb(50, 50, 50)
+		--scroll-bar-colour: rgb(20, 20, 20)
+
+html
+	body
+		a
+			color: $g2
+		margin: 0
+		background-color: var(--bg-color)
+		nav.header
+			margin-left: 10%
+			margin-right: 10%
+			position: fixed
+			width: 100%
+			width: -moz-available
+			width: -webkit-fill-available
+			background-image: linear-gradient($g1, $g2)
+			border-radius: 0
+			border-bottom-left-radius: $br
+			border-bottom-right-radius: $br
+			padding: 10px
+			a
+				color: $bg
+				text-decoration: none
+			a.steam
+				float: right
+		main
+			display: flex
+			padding-top: 40px
+			nav.sidebar
+				width: 20%
+				margin-left: 10%
+				ul
+					list-style: none
+					margin-left: -40px
+					li
+						h1
+							margin-top: 20px
+							margin-bottom: 15px
+						a
+							color: #000
+							text-decoration: none
+							&:hover
+								text-decoration: underline
+			ul.home
+				list-style: none
+				width: 100%
+				margin-left: -40px
+				li
+					margin-left: 10%
+					margin-right: 10%
+					margin-bottom: 20px
+					a
+						color: #000
+						text-decoration: none
+						h1
+							margin: 0
+					&:hover
+						h1
+							text-decoration: underline
+			article
+				width: 80%
+				margin-left: 10px
+				margin-right: 10%
+				sup
+					background-image: linear-gradient($g1, $g2)
+					padding: 5px
+					margin-left: 3px
+					border-radius: $br
+					color: $bg
+				img
+					width: 100%
+					border-radius: $br
+			article.page
+				margin-left: 10%
+		footer
+			p
+				margin-left: 10%
+				margin-right: 10%
+				a
+					color: #000
+			.version
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+
+@media only screen and (max-width: 1400px)
+	html
+		body
+			nav.header
+				margin-left: 5%
+				margin-right: 5%
+			main
+				nav.sidebar
+					margin-left: 5%
+					width: 25%
+				ul.home
+					li
+						margin-left: 5%
+						margin-right: 5%
+				article
+					margin-right: 5%
+					width: 75%
+				article.page
+					margin-left: 5%
+			footer
+				p
+					margin-left: 5%
+					margin-right: 5%
+
+@media only screen and (max-width: 1100px)
+	html
+		body
+			nav.header
+				margin-left: 10px
+				margin-right: 10px
+			main
+				nav.sidebar
+					margin-left: 10px
+				ul.home
+					li
+						margin-left: 10px
+						margin-right: 10px
+				article
+					margin-left: 10px
+					margin-right: 10px
+				article.page
+					margin-left: 10px
+			footer
+				p
+					margin-left: 10px
+					margin-right: 10px
+
+@media only screen and (max-width: 940px)
+	html
+		body
+			main
+				nav.sidebar
+					display: none
+				article
+					width: 100%
+					width: -moz-available
+					width: -webkit-fill-available
+
+/* Scrollbars */
+*
+	scrollbar-width: thin
+	scrollbar-color: var(--scroll-bar-colour) var(--bg-colour)
+*::-webkit-scrollbar 
+	width: 5px
+	height: 5px
+
+*::-webkit-scrollbar-track 
+	background: transparent
+
+*::-webkit-scrollbar-thumb 
+	background-color: var(--scroll-bar-colour)
+	border-radius: 10px

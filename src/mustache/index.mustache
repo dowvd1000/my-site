@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" color-mode="user">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Home Page">
+        {{#dist}}
+        <link rel="dns-prefetch" href="https://assets.dow.x10.mx">
+        <link rel="dns-prefetch" href="https://api.dow.x10.mx">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://api.dow.x10.mx" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" crossorigin>
+        <link rel="stylesheet" href="https://assets.dow.x10.mx/dist/css/styles.css?v={{version}}" crossorigin>
+        <link rel="icon" href="https://assets.dow.x10.mx/dist/imgs/square.jpg?v={{version}}" crossorigin>
+        {{/dist}}
+        {{^dist}}
+        <link rel="stylesheet" href="//localhost/assets/dist/css/fonts.css">
+        <link rel="stylesheet" href="//localhost/assets/dist/css/styles.css">
+        <link rel="icon" href="//localhost/assets/dist/imgs/square.jpg">
+        {{/dist}}
+        <title>{{name}}</title>
+    </head>
+    <body>
+        <nav class="header">
+            <a href="/">{{name}}</a>
+            <a class="steam" id="steam-info" href="https://steamcommunity.com/id/dowvd1000">Steam Info...</a>
+            <?php include "_includes/nav.htm"; ?>
+        </nav>
+        <main id="content">
+            <article class="page">
+                <h1>Loading...</h1>
+                <p>Please wait while the page loads.<p>
+            </article>
+        </main>
+        <footer>
+            <?php include "_includes/footer.htm"; ?>
+        </footer>
+        {{#dist}}
+        <script async type="module" src="https://assets.dow.x10.mx/dist/js/page.js?v={{version}}" crossorigin></script>
+        {{/dist}}
+        {{^dist}}
+        <script async type="module" src="//localhost/assets/dist/js/page.js"></script>
+        {{/dist}}
+    </body>
+</html>

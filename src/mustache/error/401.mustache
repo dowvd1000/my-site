@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" color-mode="user">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex">
+        <link rel="dns-prefetch" href="https://assets.dow.x10.mx">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://assets.dow.x10.mx" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" crossorigin>
+        <link rel="stylesheet" href="https://assets.dow.x10.mx/dist/css/styles.css?v={{version}}" crossorigin>
+        <link rel="icon" href="https://assets.dow.x10.mx/dist/imgs/square.jpg" crossorigin>
+        <title>401 Authorization Required — {{name}}</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li id="header">{{name}}</li>
+                <?php include "_includes/nav.html"; ?>
+            </ul>
+        </nav>
+        <hr>
+        <main id="content">
+            <article class="page">
+                <h1>Authorization Required</h1>
+                <p>This server could not verify that you are authorized to access the document requested. Either you supplied the wrong credentials (e.g., bad password), or your browser doesn't understand how to supply the credentials required.</p>
+                <p><small><a href="mailto:webmaster@dow.x10.mx">webmaster@dow.x10.mx</a></small></p>
+            </article>
+        </main>
+        <hr>
+        <?php include "_includes/footer.htm"; ?>
+    </body>
+</html>
